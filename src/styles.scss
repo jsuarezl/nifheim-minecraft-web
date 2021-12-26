@@ -1,0 +1,378 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-url: url(https://i.imgur.com/AVoKStB.png);
+  --main-color: #dc3545;
+  --text-color: #fff;
+  --store: rgb(138, 50, 59);
+  --footer-bg: #302e2e;
+  --header-filter: blur(100px);
+  --header-background: linear-gradient(#212121 0, rgb(214 17 17 / 22%) 0%, #252323 90%);
+  --panel-heading: #424040;
+  --panel-body: #2c2b2b;
+  --box-shadow: 0 4px 0 hsla(210, 11%, 13%, 0.85);
+  --announce-bg: #dc3545;
+  --announce-shadow: 0 4px 0 hsl(354deg 49% 29%);
+  --count-transition: all 1s cubic-bezier(0.33, 0.74, 0.28, 0.82) !important;
+  --scrollbar-color: #dc3545;
+  --scrollbar-bg: #3f4045;
+  --logo-height: 150px;
+  --font-family: "Nunito Sans", "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --html-background: #252323;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+html {
+  overflow-x: hidden;
+  font: 14px / 1.4 sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #fffefe;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  background-color: var(--html-background);
+}
+
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: #252323 no-repeat fixed center center;
+  font-family: var(--font-family);
+  color: var(--text-color);
+  z-index: 1;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.container {
+  position: relative;
+  min-height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+small {
+  font-size: 80%;
+}
+
+small, .small {
+  font-size: 85%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+.euphoria-menu {
+  height: 60px;
+}
+
+li.nav-item {
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-color) !important;
+  height: 60px;
+  padding: 0 10px;
+  //transition: 140ms all ease-in-out;
+  align-items: center;
+  line-height: 60px;
+  animation: 0.1s;
+}
+
+a.nav-link i {
+  margin-right: 2px;
+}
+
+a.nav-link:hover {
+  transform: scaleX(1) rotate(5deg);
+  color: var(--main-color) !important;
+  transition: all 1s ease;
+}
+
+.left i {
+  float: right;
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  font-size: 40px;
+  margin-top: -10px;
+  color: var(--main-color);
+}
+
+.right i {
+  float: left;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  font-size: 40px;
+  margin-top: -10px;
+  color: var(--main-color);
+}
+
+.players {
+  font-size: 14px !important;
+  font-weight: normal;
+  color: var(--text-color);
+  line-height: 18px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-family: "Fredoka One", cursive;
+  text-transform: uppercase;
+}
+
+.players a {
+  color: var(--text-color);
+}
+
+.players a:hover {
+  color: var(--text-color);
+}
+
+.left {
+  float: left;
+  position: relative;
+  bottom: -10px;
+  text-align: left;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  width: 250px;
+  height: 60px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 1s cubic-bezier(0.33, 0.74, 0.28, 0.82) !important;
+  margin-top: 17.5ch;
+}
+
+.left:hover {
+  bottom: 2px;
+  transition: var(--count-transition);
+}
+
+.right {
+  float: right;
+  position: relative;
+  bottom: -10px;
+  background: rgba(255, 255, 255, 0.02);
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  width: 250px;
+  height: 60px;
+  text-align: right;
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.33, 0.74, 0.28, 0.82) !important;
+  margin-top: 17.5ch;
+}
+
+.right:hover {
+  bottom: 2px;
+  transition: var(--count-transition);
+}
+
+#euphoria-mc {
+  font-size: 14px;
+  display: contents;
+  color: var(--main-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+}
+
+#euphoria-discord {
+  font-size: 14px;
+  display: contents;
+  color: var(--main-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+}
+
+i.mdi.mdi-comment-alert-outline {
+  font-size: 22px;
+  height: 22px;
+  line-height: 22px;
+  display: block;
+  position: absolute;
+  top: 2px;
+  bottom: 0;
+  left: 15px;
+  margin: auto 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--main-color);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #fff;
+  text-decoration: none !important;
+  opacity: 0.9;
+}
+
+::selection {
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+@media only screen and (max-width: 1105px) {
+  #particles-js {
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+h5 a {
+  color: var(--main-color);
+}
+
+.logo {
+  text-align-last: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul#euphoria-menu {
+  z-index: 99;
+}
+
+.mdi-badge {
+  height: 40px;
+  background: var(--main-color);
+  border-radius: 0 4px 4px 4px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 0;
+  top: -2.7ch;
+  left: -1ch;
+  float: left;
+  color: var(--text-color);
+  min-width: 45px;
+  width: 45px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 3px 0 hsl(354deg 49% 29%);
+}
+
+.mdi-badge:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 100%;
+  width: 6px;
+  height: 7px;
+  background: var(--main-color);
+  border-radius: 6px 0 0 0;
+}
+
+i.mdi.mdi-package-up {
+  font-size: 20px;
+  text-shadow: 1px 1px #282828;
+}
+
+i.mdi.mdi-coin {
+  font-size: 20px;
+  text-shadow: 1px 1px #282828;
+}
+
+i.mdi.mdi-medal {
+  font-size: 20px;
+  text-shadow: 1px 1px #282828;
+}
+
+i.mdi.mdi-timer-sand {
+  font-size: 20px;
+  text-shadow: 1px 1px #282828;
+}
+
+i.mdi.mdi-card-text {
+  font-size: 20px;
+  text-shadow: 1px 1px #282828;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+  padding: 5px 16px !important;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.mdi-badge i {
+  font-size: 20px;
+  text-shadow: 1px 1px #282828;
+}
