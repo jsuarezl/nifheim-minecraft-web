@@ -178,50 +178,6 @@ a.nav-link:hover {
   color: var(--text-color);
 }
 
-.left {
-  float: left;
-  position: relative;
-  bottom: -10px;
-  text-align: left;
-  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 5px;
-  padding: 10px 10px 10px 10px;
-  width: 250px;
-  height: 60px;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.02);
-  transition: all 1s cubic-bezier(0.33, 0.74, 0.28, 0.82) !important;
-  margin-top: 17.5ch;
-}
-
-.left:hover {
-  bottom: 2px;
-  transition: var(--count-transition);
-}
-
-.right {
-  float: right;
-  position: relative;
-  bottom: -10px;
-  background: rgba(255, 255, 255, 0.02);
-  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 5px;
-  padding: 10px 10px 10px 10px;
-  width: 250px;
-  height: 60px;
-  text-align: right;
-  cursor: pointer;
-  transition: all 1s cubic-bezier(0.33, 0.74, 0.28, 0.82) !important;
-  margin-top: 17.5ch;
-}
-
-.right:hover {
-  bottom: 2px;
-  transition: var(--count-transition);
-}
-
 #euphoria-mc {
   font-size: 14px;
   display: contents;
@@ -287,13 +243,6 @@ a:hover, a:focus {
 canvas {
   display: block;
   vertical-align: bottom;
-}
-
-@media only screen and (max-width: 1105px) {
-  #particles-js {
-    max-width: 100%;
-    width: auto;
-  }
 }
 
 h5 a {

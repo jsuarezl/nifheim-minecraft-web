@@ -1,8 +1,8 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 import particles from './particles';
-import { NavigationStart, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
 
 declare let particlesJS: any;
 
@@ -11,15 +11,12 @@ declare let particlesJS: any;
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient, public router: Router) {
+  constructor(@Inject(DOCUMENT) private doc: Document, private httpClient: HttpClient, public router: Router) {
     this.router.events
-      .pipe(
-        filter(event => event instanceof NavigationStart)
-      )
       .subscribe(event => {
-          if (event instanceof NavigationStart) {
+          if (event instanceof NavigationStart || event instanceof NavigationEnd) {
             this.updateGlow(router.url, event.url);
           }
         }
@@ -28,12 +25,8 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     particlesJS('particles-js', particles.conf);
-    this.updateMCPlayers('mc.nifheim.net', document.getElementById('euphoria-mc'));
-    this.updateDiscordUsers('893360896821313536', document.getElementById('euphoria-discord'));
-  }
-
-  ngAfterViewInit(): void {
-    this.updateGlow(null, '');
+    this.updateMCPlayers('mc.nifheim.net', this.doc.getElementById('euphoria-mc'));
+    this.updateDiscordUsers('893360896821313536', this.doc.getElementById('euphoria-discord'));
   }
 
   updateMCPlayers(ip: string, element: HTMLElement | null): void {
@@ -71,14 +64,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     let element: HTMLElement | null;
     switch (name) {
       case 'map':
-        element = document.getElementById('map');
+        element = this.doc.getElementById('map');
         break;
       case 'punishments':
-        element = document.getElementById('punishments');
+        element = this.doc.getElementById('punishments');
         break;
       case '':
       default:
-        element = document.getElementById('home');
+        element = this.doc.getElementById('home');
         break;
     }
     return element;
