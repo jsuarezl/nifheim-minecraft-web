@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://nifheim.net/</loc>
+    <lastmod>2021-12-28T18:26:31+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://nifheim.net/map</loc>
+    <lastmod>2021-12-28T18:26:31+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://nifheim.net/punishments</loc>
+    <lastmod>2021-12-28T18:26:31+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tienda.nifheim.net/</loc>
+    <lastmod>2021-12-28T18:29:34+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://tienda.nifheim.net/category/rangos-1-mes</loc>
+    <lastmod>2021-12-28T18:29:40+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tienda.nifheim.net/category/rangos-3-mes</loc>
+    <lastmod>2021-12-28T18:29:40+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tienda.nifheim.net/category/llaves</loc>
+    <lastmod>2021-12-28T18:29:40+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tienda.nifheim.net/category/extras</loc>
+    <lastmod>2021-12-28T18:29:40+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tienda.nifheim.net/terminos-y-condiciones</loc>
+    <lastmod>2021-12-28T18:29:40+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tienda.nifheim.net/checkout/basket</loc>
+    <lastmod>2021-12-28T18:29:40+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://tienda.nifheim.net/login</loc>
+    <lastmod>2021-12-28T18:29:40+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+</urlset>
